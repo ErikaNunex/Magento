@@ -4,6 +4,13 @@ xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/Obj
         <plugin name="Erika_Controller" type="Erika\Dev\Plugin\DevPlugin" disabled="false"  />
     </type>
 
+    <type name="Magento\Catalog\Model\Product">
+    <plugin name="Erika_Controller" type="Erika\Dev\Plugin\Product" sortOrder="1" disabled="true"/>
+    </type>
+
     <preference for="Erika\Dev\Api\PostManagementInterface" type="Erika\Dev\Model\PostManagement"/>
 
+    <preference for="Erika\Dev\Api\CategoryLinkManagementInterface" type="Erika\Dev\Model\CategoryLinkManagement" />
+    <preference for="Erika\Dev\Api\ProductLinkManagementInterface" type="Erika\Dev\Model\CategoryLinkManagement" />
+    <preference for="Erika\Dev\Api\Data\CategoryProductLinkInterface" type="Erika\Dev\Model\CategoryProductLink" />
 </config>
